@@ -1,0 +1,43 @@
+{
+  "name": "getratinggame",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@perttu/app-store-scraper": "^2.0.0",
+    "@radix-ui/react-checkbox": "^1.3.3",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-toast": "^1.2.15",
+    "autoprefixer": "^10",
+    "better-sqlite3": "^11.9.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "google-play-scraper": "^9.2.0",
+    "lucide-react": "^1.8.0",
+    "next": "14",
+    "openai": "^4.91.1",
+    "postcss": "^8",
+    "react": "^18",
+    "react-dom": "^18",
+    "supports-color": "^10.2.2",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}

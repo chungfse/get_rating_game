@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Database
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# Environment variables (SECRETS!)
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+tsconfig.tsbuildinfo
+
+# Agent/AI config (contains local paths)
+.agent/
+.claude/
+
+# Backup files
+*.bak
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
