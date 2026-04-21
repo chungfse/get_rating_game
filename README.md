@@ -38,6 +38,12 @@
 - Click any issue → filter reviews linked to that issue
 - Issue counts update dynamically with star filter
 
+### 📦 Version-Based Review Fetch
+- Click **"📦 By Version"** to scan available app versions
+- **Version Picker Modal** shows version list with review count + bar chart + release date
+- Select one or more versions → fetch reviews filtered by those versions
+- Multi-version fetch with automatic dedup by review ID
+
 ### 🗑️ Data Management
 - **Auto-cleanup**: removes reviews older than 90 days on server start
 - **Manual clear**: delete all reviews + analysis for a specific game
@@ -112,12 +118,17 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - Default filter: ≤4★ reviews
 - Subsequent fetches only pull **new reviews** (incremental)
 
-### 3. AI Analysis
+### 3. Fetch by Version
+- Click **📦 By Version** to scan available versions
+- Select version(s) in the modal → fetch reviews for those specific versions
+- Useful for tracking issues introduced in a specific app update
+
+### 4. AI Analysis
 - Click **🤖 Phân tích vấn đề** to run AI issue extraction
 - Issues appear grouped by severity: 🔴 Critical → 🟠 High → 🟡 Medium → 🔵 Low
 - Click any issue to see related reviews + actionable insight
 
-### 4. Semantic Search
+### 5. Semantic Search
 - Type a natural language query in the search bar
 - AI finds semantically related reviews (not just keyword matching)
 
@@ -177,6 +188,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 | `/api/games/[id]` | DELETE | Remove game + all data |
 | `/api/reviews` | GET | Get stored reviews (with filters) |
 | `/api/reviews/fetch` | POST | Smart incremental fetch |
+| `/api/reviews/versions` | POST | Scan versions + review counts |
 | `/api/reviews/search` | POST | AI semantic search |
 | `/api/reviews/clear` | POST | Clear reviews for a game |
 | `/api/analyze` | POST | AI issue extraction |

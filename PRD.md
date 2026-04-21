@@ -110,6 +110,13 @@
   - **Auto-cleanup**: xóa reviews > 90 ngày khi server start
   - **Manual clear**: nút 🗑️ xóa toàn bộ reviews + issues + analysis cho 1 game
 
+- [x] **F9 - Version-Based Review Fetch:**
+  - Nút **"📦 By Version"** → scan 500 reviews mới nhất → group by app version
+  - **Version Picker Modal**: hiển thị danh sách version với review count + bar chart + release date (~Tháng MM/YYYY)
+  - User chọn 1 hoặc nhiều version → Fetch reviews lọc theo version đã chọn
+  - **Multi-version fetch**: loop per version, dedup by review ID
+  - Sort version by newest first (version desc)
+
 ---
 
 ## 5. User Flows
@@ -438,7 +445,8 @@ interface AIIssueExtractionResponse {
 | `/api/games` | POST | Add game | `{appId, platform}` |
 | `/api/games/[id]` | DELETE | Remove game + data | — |
 | `/api/reviews` | GET | Get stored reviews | `?gameId=&stars=1,2,3,4&issueId=&page=1&sort=newest` |
-| `/api/reviews/fetch` | POST | Smart incremental fetch | `{gameId, limit, version?}` |
+| `/api/reviews/fetch` | POST | Smart incremental fetch | `{gameId, limit, version?, versions?}` |
+| `/api/reviews/versions` | POST | Scan versions + review counts | `{gameId, sampleSize?}` |
 | `/api/reviews/search` | POST | AI semantic search | `{gameId, query}` |
 | `/api/reviews/clear` | POST | Clear all reviews for game | `{gameId}` |
 | `/api/analyze` | POST | AI issue extraction | `{gameId}` → returns `{issues}` |

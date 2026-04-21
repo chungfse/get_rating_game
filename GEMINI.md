@@ -32,13 +32,14 @@
   7. **Auto-cleanup** reviews > 90 ngày khi server start
   8. **Manual clear** (🗑️) xóa toàn bộ reviews + analysis cho 1 game
   9. **AI Optimizations**: lọc review rác (<15 chars), dedup reviews trùng, compact prompts
+  10. **Version-Based Fetch** — scan versions từ reviews → Version Picker Modal → fetch reviews lọc theo version đã chọn. Multi-version, dedup by ID
 - **Docker Services**: Không cần — SQLite local tại `./data/app.db`
 
 ### Current Phase
 - **Status**: Phase 6 (Iterative Refinement) ✅ Active
-- **All coding done**: Phase 1-8 complete + Issue Extraction redesign + Vector Search + DB cleanup
+- **All coding done**: Phase 1-8 complete + Issue Extraction redesign + Vector Search + DB cleanup + Version Picker
 - **Build**: Passes
-- **Key changes (2026-04-12)**: Replaced topic clustering with Issue Extraction, added Vector Semantic Search (hybrid: vector + GPT fallback), auto-cleanup, smart incremental fetch, clear reviews button, AI cost optimizations
+- **Key changes (2026-04-17)**: Added Version-Based Review Fetch (scan versions → modal → multi-version fetch with dedup)
 
 ### Primary Documentation
 - `PRD.md` - Full product requirements (lazy-read sections when needed)
